@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hazel Food</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Vina+Sans&display=swap');
+
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body{
+            background-color: bisque;
+            font-family: "Agbalumo", serif;
+            font-weight: 400;
+            font-style: normal; 
+          
+        }
+
+
+        /* header start  */
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(133, 59, 7);
+            padding: 10px 50px;
+            font-family: "Pacifico", serif;
+            font-weight: 400;
+            width: 100%;
+            position: fixed;
+            top: 0;
+           
+        
+        }
+
+        header .fa-egg{
+            color: bisque;
+            font-size: 70px;
+            margin: 0 5px;
+        }
+
+        .header h4{
+            font-size: 100px;
+            font-weight: 900;
+        
+        }
+
+        .btn .login-btn, .btn .signin-btn{
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 10%;
+            border: none;
+            font-size: 20px;
+        }
+
+        .btn .login-btn{
+            background-color: black;
+            border: 1px solid rgb(228, 12, 12);
+            color: rgb(239, 9, 9);
+        }
+
+
+        .btn .signin-btn{
+            background-color: red;
+            color: white;
+        }
+
+        .btn .login-btn:hover,.btn .signin-btn:hover{
+            background-color: white;
+            color: red;
+        }
+        /* section1  */
+
+        .s1{
+            margin-top: 100px;
+            padding: 10px;
+            
+        }
+        .s1 a{
+            color: black;
+           
+        }
+
+        .s1 .head{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 20px;
+           
+        }
+
+        .s1 img{
+            margin-right: 20px;
+        }
+
+        /* section2  */
+        .s2{
+            margin-left: 50px;
+        }
+        .menu{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            border: 1px solid bisque;
+            padding: 5px 10px;
+            gap: 100px;
+        }
+
+        .menu p{
+            background-color: white;
+            padding: 0 10px;
+            border-radius: 10%;
+        }
+
+        .menu i{
+           padding: 10px 10px;
+            background-color: white;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+
+      
+
+        .menu a{
+            color: black;
+            text-decoration: none;
+        }
+
+        .menu a:hover{
+            background-color: rgb(237, 155, 54);
+            padding: 5px 10px;
+            border-bottom: 1px solid black;
+        }
+
+        /* section3  */
+        .s3{
+            margin: 10px;
+        }
+
+        .s3 h3, .s4 h3, .s5 h3{
+              margin-left: 60px;
+            }
+
+       .box{
+            display: grid;
+            grid-template-columns: auto auto;
+            /* grid-template-columns: repeat(auto-fit,minmax(300px,auto)); */
+            gap: 25px;
+            margin-top: 10px;
+            padding: 10px;
+            
+            
+            
+       }
+
+       .card{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 400px;
+            background-color: rgb(240, 234, 234);
+            padding: 5px 10px;
+            border: 1px solid gray;
+            border-radius: 5%;
+            text-align: justify;
+            margin: 0 40px;
+            transition: 0.5s;
+       }
+
+       .card img{
+            width: 100px;
+            height: 100px;
+            margin-left: 5px;
+       }
+
+       .card:hover{
+            object-fit: cover;
+            transform: scale(1.1);
+            cursor: pointer;
+       }
+
+       /* section4  */
+       .s4{
+        margin: 0 20px;
+       }
+
+       .s4 h3{
+            margin-bottom: 10px;
+       }
+
+     /* section5  */
+     .s5{
+        margin: 0 20px;
+       }
+
+       .s5 h3{
+            margin-bottom: 10px;
+            margin-top: 20px;
+       }
+
+       .seafood{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 25px;
+       }
+
+       /* section6  */
+       .right{
+            width: 400px;
+            background-color: rgb(249, 243, 243);
+            margin-top: 50px;
+            height: 500px;
+            border-radius: 10%;
+            margin-right: 20px;
+       }
+
+        .right .top{
+            display: flex;
+            justify-content: space-around;
+         
+        }
+
+        .right .top p{
+            background-color: rgb(212, 195, 195);
+            margin: 30px 0;
+            padding: 5px;
+            text-align:center;
+            border: 1px solid gray;
+            border-radius: 10%;
+        }
+
+        .right .top p span,.right .bottom span{
+            font-size: 25px;
+        }
+
+        .right .middle{
+            height: 200px;
+            position: relative;
+            left: 130px;
+            bottom: 0;
+            /* background-color: red; */
+            /* margin-top: 100px; */
+        }
+
+        .right .middle img{
+            width: 100px;
+            margin-top: 100px;
+            
+        }
+        
+        .right .bottom{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .right .payment{
+          display: flex;
+         justify-content: center;
+         align-items: center;
+        }
+        
+        .text-box{
+            border: 1px solid rgb(1, 1, 1);
+            background-color: rgb(216, 213, 213);
+            padding: 10px 10px;
+            width: 300px;
+            text-align: center;
+             border-radius: 5%;
+        }
+
+        .hazel{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+           
+        }
+
+        /* section7  */
+        .s7 marquee{
+            width: 100%;
+            height: 80px;
+            /* background-color: rgb(133, 59, 7); */
+            text-align: center;
+            line-height: 80px;
+            font-size: 30px;
+            color: rgb(133, 59, 7);
+            margin-top: 200px;
+        }
+
+        section{
+            margin: 0 30px;
+        }
+
+        .s3 h3{
+            margin-left: 50px;
+        }
+
+        @media (max-width:1080px){
+           
+
+            .btn{
+                margin-right: 50px;
+            }
+
+            .hazel{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+    
+             }
+
+             .s3 h3, .s4 h3, .s5 h3{
+               margin-left: 60px;
+             }
+
+             .left{
+                font-size: 10px;
+             }
+
+            .card{
+           
+                width: 300px;
+             }
+
+            .card img{
+                    width: 100px;
+                    height: 100px;
+                    
+            }
+
+        }
+
+        @media (max-widht: 900px){
+            h3{
+                margin-left: 100px;
+            }
+
+            .menu{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0px 5px;
+                gap: 20px;
+            }
+
+            .menu a{
+                font-size: 10px;
+            }
+
+           
+
+            
+
+
+         
+        }
+
+        @media (max-width: 750px){
+            .menu{
+                display: grid;
+                grid-template-columns: repeat(auto-fit,minmax(300px,auto));
+                gap: 15px;
+                margin-left: 10px;
+                justify-content: center;
+                align-items: center;
+                
+            }
+
+            .box{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .seafood{
+                display: flex;
+                flex-direction: column;
+            }
+
+            .card{
+               
+                width: 500px;
+                background-color: rgb(240, 234, 234);
+                padding: 5px 10px;
+                border: 1px solid gray;
+                border-radius: 5%;
+                text-align: justify;
+                align-items: center;
+            }
+
+            .card img{
+                    width: 100px;
+                    height: 100px;
+                    margin-left: 5px;
+            }
+
+            .s3 h3, .s4 h3, .s5 h3{
+               text-align: center;
+             }
+
+             .hazel{
+                text-align: center;
+             }
+
+             .right .middle img{
+            
+                 margin-top: 100px;
+                 margin-right: 250px;
+            
+            }
+            .hazel{
+               margin-left: 10px;
+
+            }
+        }
+
+        @media (max-width: 510px){
+            .btn .login-btn, .btn .signin-btn{
+                padding: 5px 10px;
+                margin: 0 10px;
+                font-size: 15px;
+            }
+
+
+
+
+            .card{
+               width: 300px;
+               text-align: center;
+              
+           }
+
+           .card img{
+                   width: 50px;
+                   height: 50px;
+                  
+           }
+
+           .s3 h3, .s4 h3, .s5 h3{
+               text-align: center;
+             }
+
+             .right{
+                    width: 300px;
+                    margin-top: 50px;
+                    height: 500px;
+                   margin-top: 50px;
+                   font-size: 15px;
+            }
+
+            .right .top p span,.right .bottom span{
+                font-size: 15px;
+            }
+
+            .right .middle{
+          
+            position: relative;
+            left: 100px;
+            bottom: 0;
+            /* background-color: red; */
+            /* margin-top: 100px; */
+        }
+
+
+        .right .payment p{
+           width: 200px;
+            font-size: 15px;
+
+        }
+
+       
+
+          
+        }
+
+        @media (max-width: 400px){
+            .text{
+                font-size: 10px;
+            }
+
+            .hazel{
+               margin-left: 100px;
+
+            }
+
+            .menu{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 320px){
+
+          
+
+            .hazel{
+               margin-left: 130px;
+
+            }
+        }
+
+    </style>
+</head>
+<body>
+     <!-- header open -->
+     <header>
+        <h1><i class="fa-solid fa-egg"></i>Egg</h1>
+        <div class="btn">
+            <a href="./login.html"><button class="login-btn">Log In</button></a>
+            <a href="./signin.html"><button class="signin-btn">Sign In</button></a>
+        </div>
+    </header>
+
+<!-- header close -->
+    <!-- section1  -->
+    <section class="s1">
+        <p> <a href="./index.html">Homepage</a> > <a href="./ygn.html">Yangon</a> >Hazel Food</p>
+        <div class="head">
+            <img src="./image/hazel.PNG" alt="" width="200px">
+            <div class="text">
+                <h4>Asian Burmese Rice DishesFried RiceNan Gyi Thote</h5>
+                <h3>Hazel Food</h4>
+                <h4>MMK 750 delivery</h6>
+            </div>
+        </div>
+    </section>
+
+    <!-- section2 -->
+     <section class="menu">
+        <a><i class="fa-solid fa-magnifying-glass"></i>Search in Menu</a>
+        <a href="#s3">Main Menu(4)</a>
+        <a href="#s4">Korean Food</a>
+        <a href="#s5">Sea Food(2)</a>
+     </section>
+
+     <div class="hazel">
+
+        <div class="left">
+
+        <!-- section3  -->
+        <section class="s3" id="s3">
+          <h3>Main Menu</h3>
+          <div class="box">
+            
+  
+                  <div class="card">
+                      <p>Seafood Famiky set <br>
+                          <strike>MMK 61500 </strike> MMK 60000 <br>
+                          ဂဏန်းမဆလာ ပုစွန်အချို ခရုချဉ်စပ် အရွက်ကြော် အရည်သောက် ငပိထောင်း
+                      
+                      </p>
+                      <img src="./image/seafood1.jpg" alt="">
+  
+                  </div>
+  
+                  <div class="card">
+                      <p>ဂဏန်းအသားအချို ပုစွန်ချဥ်စပ် ဂုံးချဥ်စပ် အရွက်ကြော် အရည်သောက် ငပိထောင်း <br>
+                          <strike>MMK 61500 </strike> MMK 60000 <br>
+                          ဂဏန်းအသားအချို ပုစွန်ချဥ်စပ် ဂုံးချဥ်စပ်
+                      
+                      </p>
+                      <img src="./image/seafood2.jpg" alt="">
+  
+                  </div>
+  
+                  <div class="card">
+                      <p>ချောင်းသာပင်လယ်စာထမင်းဝိုင်း set 4 <br>
+                          <strike>MMK 61500 </strike> MMK 60000 <br>
+                          ဂဏန်းချဥ်စပ် ကင်းမွန်မဆလာ လယ်ခရုချဥ်စပ်သုပ် အရွက်ကြော် အရည်သောက် ငပိထောင်း
+                      </p>
+                      <img src="./image/seafood3.jpg" alt="">
+  
+                  </div>
+  
+                  <div class="card">
+                      <p>ချောင်းသာထမင်းဝိုင်း set 3 <br>
+                          <strike>MMK 61500 </strike> MMK 60000 <br>
+                          ဂဏန်းမဆလာ ရေဘဝဲချဥ်စပ် ဂုံးချဥ်စပ်သုပ် အရွက်ကြော် အရည်သောက် ငပိထောင်း
+                      
+                      </p>
+                      <img src="./image/seafood4.jpg" alt="">
+  
+                  </div>
+  
+                 
+                      
+  
+              
+          </div>
+        </section>
+        <!-- section4  -->
+         <section class="s4" id="s4">
+              <h3>Korea Food</h3>
+              <div class="card">
+                  <p>Kimchi Fried Rice<br>
+                      <strike>MMK 5,000 </strike> MMK 4000 <br>
+                      For ref only: Fried rice with korean kimchi paste, egg, carrot,soy sauce and seasonings
+                  
+                  </p>
+                  <img src="./image/korea food.jpg" alt="">
+              </div>
+         </section>
+  
+         <!-- section5 -->
+          <section class="s5" id="s5">
+              <h3>Seafood</h3>
+              <div class="seafood">
+                  
+              <div class="card">
+                  <p>Spicy and Sour Squid <br>
+                      <strike> MMK 15,750 </strike> MMK 15,000 <br>
+                      For ref only: Curry cooked with fresh squid, chili, fish sauce, tamarind juice, tomato and seasonings
+                  
+                  </p>
+                  <img src="./image/spicy.jpg" alt="">
+  
+              </div>
+  
+              <div class="card">
+                  <p>ရေဘဝဲမဆလာ <br>
+                      <strike>MMK 15,750 </strike> MMK  15,000 <br>
+                      For ref only: Curry cooked with fresh squid, chili, fish sauce, tamarind juice, tomato and seasonings
+                  
+                  </p>
+                  <img src="./image/babyfinger.jpg" alt="">
+  
+              </div>
+              </div>
+          </section>
+      
+     </div>
+  
+     <!-- section6 -->
+     <div class="right">
+          <div class="top">
+              <p> <span>Delivery</span><br>
+                  Not Available
+              </p>
+              <p> <span>Pick-up</span><br>
+                  Not Available
+              </p>
+          </div>
+          <div class="middle">
+              <img src="./image/foodpanda.svg" alt="">
+          </div>
+          <div class="bottom">
+              <p>Total(incl.fees and tax) <br>
+                  <span>See Summary</span>
+              </p>
+              <p>MMK 0</p>
+          </div>
+          <div class="payment">
+              <p class="text-box">Review payment and address</p>
+          </div>
+     </div>
+  
+     </div>
+
+     <!-- section7  -->
+     <section class="s7">
+        <marquee behavior="scroll" direction="right">&#128157;Thanks Your Order&#128157;</marquee>
+
+     </section>
+</body>
+</html>
