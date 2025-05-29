@@ -144,6 +144,7 @@ header .fa-egg{
 
 
 .s1 .discount .discount-image{
+    z-index: -1;
     position: relative;
 }
 
